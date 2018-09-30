@@ -72,8 +72,12 @@
         required />
 
       <button
-        class="button -fill-success text-center"
-        @click="sendNewContact">Add Contact</button>
+        class="button -icon-left -fill-success text-center"
+        @click="sendNewContact"
+        @keyup.enter="sendNewContact">
+        <Icon name="plus" />
+        <span>Add Contact</span>
+      </button>
     </form>
   </div>
 </div>
@@ -118,9 +122,7 @@ export default {
       }
     },
     toggleEdit() {
-      if (this.validateContact()) {
-        this.$emit('toggle')
-      }
+      this.$emit('toggle')
     },
     validateContact() {
       if (this.newContact.fname && this.newContact.email) {
