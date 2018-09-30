@@ -1,11 +1,12 @@
 import Vue from 'vue'
 import App from './App.vue'
-
 import './assets/main.styl'
+import Icon from '@/components/Icon'
 
 Vue.config.productionTip = false
 
-// Using as Global for LocalStorage Key
+// Register globally
+Vue.component('Icon', Icon)
 Vue.prototype.$http = 'contact-list-vuejs'
 
 new Vue({
