@@ -20,6 +20,7 @@
           <span class="sr-only">{{ editText }}</span>
           <Icon :name="editText + '-2'" />
         </button>
+
         <button
           class="button -icon-center -fill-error -small"
           @click="removeContact"
@@ -126,7 +127,8 @@ export default {
   transition opacity 0.3s ease-in-out
 
   .button
-    margin 3px 0
+    margin-top 3px
+    margin-bottom 3px
 
   &.show
     opacity 1
