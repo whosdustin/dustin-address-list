@@ -9,7 +9,7 @@
     "deploy": "yarn build && now --public && now alias"
   },
   "dependencies": {
-    "velocity-animate": "^1.5.2",
+    "randomcolor": "^0.5.3",
     "vue": "^2.5.17"
   },
   "devDependencies": {
