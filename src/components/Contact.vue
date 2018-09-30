@@ -92,7 +92,7 @@ export default {
   transition all 0.2s linear
   border-radius 6px
   box-shadow 0 6px 22px 0 rgba(0,0,0,0.15)
-  background #f5f5f5
+  background #ffffff
   cursor pointer
 
 .media
@@ -103,7 +103,6 @@ export default {
   height 50px
   font-weight bold
   border-radius 25px
-  background tomato
   color #000
 
 .content
