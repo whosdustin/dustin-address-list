@@ -13,39 +13,61 @@
   transition all 0.2s linear
   cursor pointer
 
-.button:hover
-  -webkit-transform scale(1.02)
-  transform scale(1.02)
-  box-shadow 0 7px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+  &:hover
+    -webkit-transform scale(1.02)
+    transform scale(1.02)
+    box-shadow 0 7px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 
-.button:active
-  -webkit-transform scale(1)
-  transform scale(1)
-  box-shadow none
+  &:active
+    -webkit-transform scale(1)
+    transform scale(1)
+    box-shadow none
 
-.button:focus
-  outline 0
+  &:focus
+    outline 0
 
-.button:disabled
-  -webkit-transform scale(1)
-  transform scale(1)
-  box-shadow none
+  &:disabled
+    -webkit-transform scale(1)
+    transform scale(1)
+    box-shadow none
 
+  &.-small
+    height 32px
+
+  &.-fill
+    &-error
+      background #ff6473
+      color #ffffff
+
+    &-success
+      background #5cc1b3
+      color #ffffff
+
+    &-gray
+      background #757882
+      color #ffffff
+
+
+
+  &.-icon
+    &-right
+      text-align left
+      padding 0 20px
+
+      > .icon
+        margin-left 10px
+
+    &-left
+      text-align right
+      padding 0 20px
+
+      > .icon
+        margin-right 10px
+
+    &-center
+      padding 0 20px
 
 .button + .button
-  margin-left 1em
-
-.button.-fill-error
-  background #ff6473
-  color #ffffff
-
-.button.-fill-success
-  background #5cc1b3
-  color #ffffff
-
-.button.-fill-gray
-  background #757882
-  color #ffffff
-
-.button.-small
-  height 32px
+  margin-left 0
+  @media (min-width: 600px)
+    margin-left 1em
