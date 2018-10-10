@@ -60,17 +60,13 @@ export default {
       return `${this.contact.fname} ${this.contact.lname}`
     },
     initials() {
-      const name = [
+      const names = [
         this.contact.fname,
         this.contact.lname
       ]
 
-      let initials = ""
-      name.forEach(str => {
-        initials += str.charAt(0)
-      })
-
-      return initials.toUpperCase()
+      const initials = this.$compact(names.map(i => i[0]))
+      return initials.join('').toUpperCase()
     }
   },
   methods: {
